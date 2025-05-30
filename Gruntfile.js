@@ -26,7 +26,7 @@ module.exports = function (grunt) {
                     },
 
                     files: {
-                         'dist/index.min.html': 'src/index.html',
+                         'dist/index.html': 'src/index.html',
                     },
                },
           },
