@@ -1,0 +1,100 @@
+@import 'mapas.less';
+@import 'variaveis.less';
+
+body {
+     background: darken(#c9edfe, 20%);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+}
+
+.calculadora {
+     background: #colors[backgroundcalculadora];
+     padding: 20px;
+     border-radius: 15px;
+     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+     width: 270px;
+
+     #display {
+          font-family: @fontText;
+          background-color: #colors[backgrounddisplay];
+          max-width: 250px;
+          width: 100%;
+          height: 50px;
+          font-size: 29px;
+          text-align: right;
+          margin-bottom: 10px;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+
+          &:focus {
+               border: 1px solid #ccc;
+               outline: none;
+          }
+     }
+
+     .botoes {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+
+          .operations {
+               background: @buttonColorOpe;
+               box-shadow: 0 5px 0 darken(@buttonColorOpe, 15%);
+               transform: translateY(-3px);
+               transition: all 0.2s ease;
+
+               &:active {
+                    box-shadow: 0 2px 0 darken(@buttonColorOpe, 25%);
+                    transform: translateY(3px);
+               }
+          }
+
+          .clean {
+               background: @buttonClean;
+               box-shadow: 0 5px 0 darken(@buttonClean, 15%);
+               transform: translateY(-3px);
+               transition: all 0.2s ease;
+
+               &:active {
+                    box-shadow: 0 2px 0 darken(@buttonClean, 25%);
+                    transform: translateY(3px);
+               }
+          }
+
+          .result {
+               background: @buttonResult;
+               box-shadow: 0 5px 0 darken(@buttonResult, 15%);
+               transform: translateY(-3px);
+               transition: all 0.2s ease;
+
+               &:active {
+                    box-shadow: 0 2px 0 darken(@buttonResult, 25%);
+                    transform: translateY(3px);
+               }
+          }
+
+          button {
+               font-family: @fontText;
+               padding: 15px;
+               font-size: 18px;
+               border: none;
+               border-radius: 8px;
+               background: @buttonColorNun;
+               color: #colors[textbutton];
+               cursor: pointer;
+               transition: background 0.2s;
+
+               box-shadow: 0 5px 0 darken(@buttonColorNun, 15%);
+               transform: translateY(-3px);
+               transition: all 0.2s ease;
+
+               &:active {
+                    box-shadow: 0 2px 0 darken(@buttonColorNun, 25%);
+                    transform: translateY(3px);
+               }
+          }
+     }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Calculadora com Grunt</title>
+          <link rel="stylesheet" href="../dist/styles/style.min.css" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+               href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+               rel="stylesheet"
+          />
+     </head>
+     <body>
+          <div class="calculadora">
+               <input type="text" id="display" readonly />
+               <div class="botoes">
+                    <button onclick="limpar()" class="clean">C</button>
+                    <button onclick="adicionar('/')" class="operations">/</button>
+                    <button onclick="adicionar('*')" class="operations">*</button>
+                    <button onclick="adicionar('-')" class="operations">-</button>
+
+                    <button onclick="adicionar('7')">7</button>
+                    <button onclick="adicionar('8')">8</button>
+                    <button onclick="adicionar('9')">9</button>
+                    <button onclick="adicionar('+')" class="operations">+</button>
+
+                    <button onclick="adicionar('4')">4</button>
+                    <button onclick="adicionar('5')">5</button>
+                    <button onclick="adicionar('6')">6</button>
+                    <button onclick="calcular()" class="result">=</button>
+
+                    <button onclick="adicionar('1')">1</button>
+                    <button onclick="adicionar('2')">2</button>
+                    <button onclick="adicionar('3')">3</button>
+                    <button onclick="adicionar('0')">0</button>
+               </div>
+          </div>
+
+          <script src="../dist/scripts/main.min.js"></script>
+     </body>
+</html>
