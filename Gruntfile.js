@@ -2,6 +2,14 @@ module.exports = function (grunt) {
      grunt.initConfig({
           pkg: grunt.file.readJSON('package.json'),
 
+          mkdir: {
+           all: {
+             options: {
+               create: ['dist/styles', 'dist/scripts'],
+                  },
+                },
+              },
+
           less: {
                dist: {
                     files: {
@@ -57,13 +65,14 @@ module.exports = function (grunt) {
           },
      });
 
+     grunt.loadNpmTasks('grunt-mkdir');
      grunt.loadNpmTasks('grunt-contrib-less');
      grunt.loadNpmTasks('grunt-contrib-cssmin');
      grunt.loadNpmTasks('grunt-contrib-htmlmin');
      grunt.loadNpmTasks('grunt-contrib-uglify');
      grunt.loadNpmTasks('grunt-contrib-watch');
 
-     grunt.registerTask('default', ['less', 'cssmin', 'htmlmin', 'uglify']);
+     grunt.registerTask('default', ['mkdir','less', 'cssmin', 'htmlmin', 'uglify']);
 };
 //npm install
 //npm run grunt
